@@ -9,11 +9,13 @@ import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
 
 const App = () => {
-  const { authStore, checkAuth } = useAuthStore();
+  const { authUser, checkAuth } = useAuthStore();
 
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
+
+  console.log(authUser);
 
   return (
     <div>
